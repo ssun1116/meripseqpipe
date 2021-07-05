@@ -549,7 +549,7 @@ if( params.star_index && aligner == "star"){
         aligner == "star"
 
         script:
-        readLength = 50
+        readLength = 101
         overhang = readLength - 1
         """
         mkdir StarIndex
@@ -558,8 +558,7 @@ if( params.star_index && aligner == "star"){
         --genomeDir StarIndex \
         --genomeFastaFiles $fasta \
         --sjdbGTFfile $gtf \
-        --sjdbOverhang $overhang \
-	--limitGenomeGenerateRAM 36000000000
+        --sjdbOverhang $overhang 
         """
     }
 }else {
