@@ -23,7 +23,7 @@ nextflow run meripseqpipe -profile docker --designfile designfile2.tsv --compare
 ## comparefile -> use or not use? replicate? Should check the error code.
 
 ## Nextflow analysis - without deseq2
-nextflow run meripseqpipe -profile docker --designfile designfile2.tsv --comparefile false -skip_deseq2 \
---fasta GRCh38.primary_assembly.genome.fa --gtf gencode.v38.primary_assembly.annotation.gtf 
+nextflow run meripseqpipe -profile docker --designfile designfile2.tsv --comparefile false --skip_deseq2 \
+--fasta GRCh38.primary_assembly.genome.fa --gtf gencode.v38.primary_assembly.annotation.gtf --stranded yes -resume
 
 
