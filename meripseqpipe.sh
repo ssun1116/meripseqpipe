@@ -15,10 +15,15 @@ nextflow run meripseqpipe -profile test,docker
 
 ## Nextflow analysis 
 nextflow run meripseqpipe -profile docker --designfile designfile2.tsv --comparefile compare.txt \
---fasta GRCh38.primary_assembly.genome.fa --gtf gencode.v38.primary_assembly.annotation.gtf --max_cpus 6 --max_memory 32 --stranded yes
+--fasta GRCh38.primary_assembly.genome.fa --gtf gencode.v38.primary_assembly.annotation.gtf 
 
 ## designfile.tsv -> written with Rstudio 
 ## write.table(file, "filename", sep = '\t', row.names = F)
 
 ## comparefile -> use or not use? replicate? Should check the error code.
+
+## Nextflow analysis - without deseq2
+nextflow run meripseqpipe -profile docker --designfile designfile2.tsv --comparefile false -skip_deseq2 \
+--fasta GRCh38.primary_assembly.genome.fa --gtf gencode.v38.primary_assembly.annotation.gtf 
+
 
