@@ -42,6 +42,6 @@ nextflow run meripseqpipe -profile docker --designfile 50bp.trimmed.designfile2.
 --fasta GRCh38.primary_assembly.genome.fa --gtf gencode.v38.primary_assembly.annotation.gtf --stranded yes 
 
 ## Nextflow - 50bp trimmed. adapter trimmed data. without deseq2.
-nextflow run meripseqpipe.2 -profile docker --designfile 50bp.trimmed.tr_designfile.tsv --comparefile false --skip_deseq2 \
+nextflow run meripseqpipe -profile docker --designfile 50bp.trimmed.tr_designfile.tsv --comparefile false --skip_deseq2 \
 --fasta GRCh38.primary_assembly.genome.fa --gtf gencode.v38.primary_assembly.annotation.gtf --stranded yes 
 
